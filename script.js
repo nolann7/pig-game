@@ -35,8 +35,8 @@ const init = function () {
   player0El.classList.add('player--active');
   player1El.classList.remove('player--active');
 
-  document.getElementById(`name--0`).textContent = `Мама`;
-  document.getElementById(`name--1`).textContent = `Папа`;
+  document.getElementById(`name--0`).textContent = `Игрок 1`;
+  document.getElementById(`name--1`).textContent = `Игрок 2`;
   // btnNew.textContent = 'заново';
   // btnRoll.textContent = 'кинуть кости';
   // btnHold.textContent = 'забрать очки';
@@ -113,9 +113,6 @@ btnHold.addEventListener('click', function () {
 
 // reset the game
 btnNew.addEventListener('click', function () {
-  document.getElementById(`name--${activePlayer}`).textContent = `Player ${
-    activePlayer + 1
-  }`;
   init();
   // console.log('btnNew work');
 });
