@@ -34,6 +34,12 @@ const init = function () {
   player1El.classList.remove('player--winner');
   player0El.classList.add('player--active');
   player1El.classList.remove('player--active');
+
+  document.getElementById(`name--0`).textContent = `Мама`;
+  document.getElementById(`name--1`).textContent = `Папа`;
+  // btnNew.textContent = 'заново';
+  // btnRoll.textContent = 'кинуть кости';
+  // btnHold.textContent = 'забрать очки';
 };
 init();
 const switchPlayer = function () {
@@ -88,7 +94,7 @@ btnHold.addEventListener('click', function () {
       playing = false;
       diceEl.classList.add('hidden');
       // replacing Player #... for "WINNER!" to the winner
-      document.getElementById(`name--${activePlayer}`).textContent = `WINNER!`;
+      document.getElementById(`name--${activePlayer}`).textContent = `ПОБЕДА!`;
       // document.getElementById(`score--${activePlayer}`).textContent =
       //   scores[activePlayer] +
       //   `
